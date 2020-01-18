@@ -4,10 +4,7 @@ def cek_kata(sebuahkata):
 
     kata2 = sebuahkata.split()
 
-    jumlah = 0
-    for i in (kata2):
-        if i.isalpha():
-            jumlah = jumlah + 1
+    jumlah = len([kata for kata in sebuahkata.split() if kata.isalpha()])
     return str(jumlah) + "/" + str(len(kata2))
 
 

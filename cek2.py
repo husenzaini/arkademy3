@@ -1,9 +1,3 @@
-# i = 0
-# while i < 5:
-#     print(i)
-#     i = i + 1
-#     if i == 3:
-#         continue
 
 
 def sequence(x, y):
@@ -13,10 +7,12 @@ def sequence(x, y):
     result = []
     A = y
 
-    while A not in [0, 1]:
+    while True:
         result.append(A)
         A = A**2 % x
         x += 1
+        if A in [0, 1]:
+            break
 
     result.append(A)
 
